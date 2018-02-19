@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Tutorial</h2><hr>
+
+<p id="demo">When you click the button...</p>
+
+<!-- button getElementById -->
+<button type="button" onclick="document.getElementById('demo').innerHTML = 'The text changes by use of the getElementById function'">Click Me!</button><hr>
+
+<!-- The clicker -->
+<h2>The Clicker</h2>
+<button onclick="document.getElementById('myImage').src='img/pic_bulbon.gif'">Click On</button>
+
+<img id="myImage" src="img/pic_bulboff.gif" style="width:100px">
+
+<button onclick="document.getElementById('myImage').src='img/pic_bulboff.gif'">CLick Off</button>
+<hr>
+
+<!-- Change style of element -->
+<p id="demo01">Change the style of an HTML element.</p>
+
+<button type="button" onclick="document.getElementById('demo01').style.fontSize='2rem'">Click!</button>
+<hr>
+<!-- Hide Stuff -->
+<h2 id="demo02">Hide HTML elements.</h2>
+
+<button type="button" onclick="document.getElementById('demo02').style.display='none'">Click!</button>
+<hr>
+<!-- Show Stuff -->
+<p>Make Hidden HTML Appear</p>
+
+<p id="demo03" style="display:none">WAZZZUP!</p>
+
+<button type="button" onclick="document.getElementById('demo03').style.display='block'">Click</button>
+<hr>
+<!--Where to   -->
+<p id="demo04"></p>
+<script>
+document.getElementById("demo04").innerHTML = "JavaScript goes in between script tags";
+</script>
+<hr>
+<!--In the body-->
+<p id="demo05">You can put JavaScript in the body</p>
+<button type="button" onclick="myFunction1()">Click</button>
+
+<script>
+function myFunction1() {
+   document.getElementById("demo05").innerHTML = "See!";
+}
+</script>
+<hr>
+<!-- External Placement -->
+<p id="demo06">Watch this sentence...</p>
+
+<button type="button" onclick="myFunction2()">Click</button>
+
+<p>(myFunction2 is stored in an external file called "myScript.js")</p>
+
+<script src="myScript.js"></script>
+<hr>
+
+<!-- Output -->
+<h2>Do Basic Math</h2>
+<p id="demo07"></p>
+<script>
+document.getElementById("demo07").innerHTML = 5 + 6;
+</script>
+
+<script>
+document.write(6 + 6);
+</script>
+<hr>
+
+<!--A neat way to clear the screen   -->
+<h1>Using document.write() after an HTML document is fully loaded,</h1>
+<p>will delete all existing HTML:</p>
+<button type="button" onclick="document.write(  )">Clear Screen</button>
+<hr>
+
+<!-- Window alert -->
+<button type="button" onclick="window.alert( 'Popup' )">Popup</button>
+<hr>
+
+<!-- JS Statements -->
+<p>JavaScript statements are executed by the browser.</p>
+<p id="demo08"></p>
+<button type="button" onclick="window.alert('Another Popup').innerHTML = 'The text changes by use of the getElementById function'">Click</button>
+<hr>
+
+<!-- time buttons -->
+<button onclick="document.getElementById('demo09').innerHTML=Date()">What time is it?</button>
+
+
+
+</body>
+<p id="demo09"></p>
+<button onclick="this.innerHTML=Date()">Time Change In Button</button>
+<hr>
+<!-- string -->
+<p>How Long is this string?</p>
+
+<p id="demo10"></p>
+
+<script>
+var txt = "How Long is this string?";
+document.getElementById("demo10").innerHTML = txt.length;
+</script>
+<hr>
+
+<p>The indexOf() method returns the position of the first occurrence of a specified text:</p>
+<p>Where is does the string 'string' occur!</p>
+<p id="demo11"></p>
+
+<script>
+var str = "Where is does the string 'string' occur!";
+var pos = str.indexOf("string");
+document.getElementById("demo11").innerHTML = pos;
+</script>
+
+
+
+</body>
+</html>
